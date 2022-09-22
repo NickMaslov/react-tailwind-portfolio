@@ -36,7 +36,7 @@ function Header() {
                 <div className='flex justify-between items-center w-full'>
                     <Link to='/'>
                         <h1 className='text-4xl font-semibold hover:text-yellow-500 cursor-pointer '>
-                            Nick Maslov
+                            {/* Nick Maslov */}
                         </h1>
                     </Link>
 
