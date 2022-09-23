@@ -22,7 +22,7 @@ function Home() {
         <Layout>
             <div>
                 {/* Intro section */}
-                <div className='h-screen bg-theme'>
+                <div className='h-screen md:bg-theme'>
                     <div
                         className='grid md:grid-cols-1 grid-cols-2 h-screen items-center border-4 md:border-0
             mx-10 z-10 bg-theme
@@ -38,16 +38,16 @@ function Home() {
                             ></lottie-player>
                         </div>
 
-                        <div className='font-bold text-white md:px-5'>
+                        <div className='font-bold text-white md:px-5 text-center'>
                             <h1
                                 className='text-7xl md:text-4xl'
                                 data-aos='slide-right'
                             >
-                                Hii , I am{' '}
-                                <b className='text-yellow-500'>NICK</b>
+                                Hi , I am{' '}
+                                <b className='text-yellow-500'>NICK MASLOV</b>
                             </h1>
                             <h1
-                                className='text-4xl md:text-xl'
+                                className='text-4xl md:text-xl text-center'
                                 data-aos='slide-left'
                             >
                                 FullStack{' '}
@@ -59,7 +59,7 @@ function Home() {
 
                 {/* Technologies */}
 
-                <div className='mt-20'>
+                {/* <div className='mt-20'>
                     <h1
                         className='text-4xl text-blue-800 font-bold text-center my-8'
                         data-aos='slide-up'
@@ -108,13 +108,13 @@ function Home() {
                             className='w-full text-center mt-20 animate-bounce'
                         />
                     </div>
-                </div>
+                </div> */}
 
                 {/* {Javscript Buff} */}
                 <div className='my-20'>
-                    <div className='text-center h-52 bg-primary'>
-                        <h1 className='text-white font-bold text-4xl py-10'>
-                            Yes You Are Right...I am Javascript Buff
+                    <div className='text-center h-52'>
+                        <h1 className=' font-bold text-4xl py-10'>
+                            About me :)
                         </h1>
                     </div>
 
@@ -207,7 +207,7 @@ function Home() {
 
                 <div>
                     <h1 className='text-4xl text-gray-500 text-center font-bold'>
-                        Who is Sathya ?
+                        Who is Nick ?
                     </h1>
 
                     <div className='h-screen relative text-gray-800'>

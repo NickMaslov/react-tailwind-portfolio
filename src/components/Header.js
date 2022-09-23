@@ -27,16 +27,16 @@ function Header() {
     const pathname = window.location.pathname;
 
     return (
-        <div className='text-white font-mont shadow-lg '>
+        <div className='text-white font-mont shadow-lg z-20 relative '>
             <div
-                className={`flex bg-theme justify-between items-center p-2 ${
+                className={`flex bg-theme justify-between items-center p-5 pl-20 ${
                     showMenu === '' && 'md:flex-col'
                 }`}
             >
-                <div className='flex justify-between items-center w-full'>
+                <div className='flex justify-between items-center w-full '>
                     <Link to='/'>
                         <h1 className='text-4xl font-semibold hover:text-yellow-500 cursor-pointer '>
-                            {/* Nick Maslov */}
+                            Nick Maslov
                         </h1>
                     </Link>
 
@@ -56,7 +56,7 @@ function Header() {
                     {menuItems.map((item) => (
                         <li
                             className={`list-none mx-5 px-5 ${
-                                item.key == pathname &&
+                                item.key === pathname &&
                                 'bg-white text-black rounded-md'
                             }`}
                         >
