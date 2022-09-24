@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
-import {
-    FaBootstrap,
-    FaCss3,
-    FaHtml5,
-    FaJsSquare,
-    FaNodeJs,
-    FaReact,
-    FaAngular,
-    FaJava,
-} from 'react-icons/fa';
+// import {
+//     FaBootstrap,
+//     FaCss3,
+//     FaHtml5,
+//     FaJsSquare,
+//     FaNodeJs,
+//     FaReact,
+//     FaAngular,
+//     FaJava,
+// } from 'react-icons/fa';
 import AOS from 'aos';
 AOS.init({
     duration: 1000,
@@ -22,15 +22,14 @@ function Home() {
         <Layout>
             <div>
                 {/* Intro section */}
-                <div className='h-screen md:bg-theme'>
+                <div className='h-screen bg-theme'>
                     <div
                         className='grid md:grid-cols-1 grid-cols-2 h-screen items-center border-4 md:border-0
-            mx-10 z-10 bg-theme
-          border-white transform rotate-12 md:rotate-0'
+            mx-10 md:mx-5 z-10 bg-theme border-white transform rotate-12 md:rotate-0 w-11/12'
                     >
                         <div className='h-1/2'>
                             <lottie-player
-                                src='https://assets4.lottiefiles.com/packages/lf20_kkflmtur.json'
+                                src='https://assets8.lottiefiles.com/private_files/lf30_WdTEui.json'
                                 background='transparent'
                                 speed='1'
                                 loop
@@ -44,7 +43,11 @@ function Home() {
                                 data-aos='slide-right'
                             >
                                 Hi , I am{' '}
-                                <b className='text-yellow-500'>NICK MASLOV</b>
+                                <h1>
+                                    <b className='text-yellow-500'>
+                                        NICK MASLOV
+                                    </b>
+                                </h1>
                             </h1>
                             <h1
                                 className='text-4xl md:text-xl text-center'
@@ -113,7 +116,7 @@ function Home() {
                 {/* {Javscript Buff} */}
                 <div className='my-20'>
                     <div className='text-center h-52'>
-                        <h1 className=' font-bold text-4xl py-10'>
+                        <h1 className=' font-bold text-6xl py-10'>
                             About me :)
                         </h1>
                     </div>
@@ -140,8 +143,8 @@ function Home() {
 
                 {/* {Dev stack section} */}
                 <div className='my-20'>
-                    <div className='text-center h-52 bg-red-500'>
-                        <h1 className='text-white font-bold text-4xl py-10'>
+                    <div className='text-center h-52'>
+                        <h1 className='font-bold text-6xl py-10'>
                             My DEV Stack
                         </h1>
                     </div>
@@ -231,6 +234,7 @@ function Home() {
                                             age: null,
                                             gender: 'Male',
                                             country: 'USA',
+                                            born: 'Ukraine',
                                         },
                                         null,
                                         2
