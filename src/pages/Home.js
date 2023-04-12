@@ -43,11 +43,7 @@ function Home() {
                                 data-aos='slide-right'
                             >
                                 Hi , I am{' '}
-                                <h1>
-                                    <b className='text-yellow-500'>
-                                        NICK MASLOV
-                                    </b>
-                                </h1>
+                                <h1 className='text-yellow-500'>NICK MASLOV</h1>
                             </h1>
                             <h1
                                 className='text-4xl md:text-xl text-center'
@@ -116,12 +112,10 @@ function Home() {
                 {/* {Javscript Buff} */}
                 <div className='my-20'>
                     <div className='text-center h-52'>
-                        <h1 className=' font-bold text-6xl py-10'>
-                            About me :)
-                        </h1>
+                        <h1 className=' font-bold text-6xl py-10'>About me</h1>
                     </div>
 
-                    <div className='md:mx-5 mx-32 shadow-2xl bg-gray-50 -mt-20 rounded-lg hover:bg-gray-700 hover:text-white'>
+                    <div className='md:mx-5 mx-32 shadow-2xl bg-gray-50 -mt-20 rounded-lg hover:bg-sky-700 hover:text-white'>
                         <div className='h-96' data-aos='zoom-in'>
                             <lottie-player
                                 src='https://assets9.lottiefiles.com/packages/lf20_sSF6EG.json'
@@ -149,7 +143,7 @@ function Home() {
                         </h1>
                     </div>
 
-                    <div className='md:mx-5 mx-32 shadow-2xl bg-gray-50 -mt-20 rounded-lg hover:bg-gray-700 hover:text-white'>
+                    <div className='md:mx-5 mx-32 shadow-2xl bg-gray-50 -mt-20 rounded-lg hover:bg-sky-700 hover:text-white'>
                         <div className='h-96' data-aos='zoom-in'>
                             <lottie-player
                                 src='https://assets2.lottiefiles.com/packages/lf20_aptscmnx.json'

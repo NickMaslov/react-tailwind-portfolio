@@ -1,35 +1,36 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
+import CV from '../resources/cv.pdf';
+
+const menuItems = [
+    {
+        title: 'Home',
+        key: '/',
+    },
+    {
+        title: 'Projects',
+        key: '/projects',
+    },
+    {
+        title: 'Blog',
+        key: '/blog',
+    },
+    {
+        title: 'Contact',
+        key: '/contact',
+    },
+];
 
 function Header() {
     const [showMenu, setShowMenu] = useState('md:hidden');
-
-    const menuItems = [
-        {
-            title: 'Home',
-            key: '/',
-        },
-        {
-            title: 'Projects',
-            key: '/projects',
-        },
-        {
-            title: 'Blog',
-            key: '/blog',
-        },
-        {
-            title: 'Contact',
-            key: '/contact',
-        },
-    ];
 
     const pathname = window.location.pathname;
 
     return (
         <div className='text-white font-mont shadow-lg z-20 relative '>
             <div
-                className={`flex bg-theme justify-between items-center p-5 pl-20 ${
+                className={`flex bg-theme justify-between items-center md:p-5 pl-20 ${
                     showMenu === '' && 'md:flex-col'
                 }`}
             >
@@ -63,6 +64,13 @@ function Header() {
                             <Link to={`${item.key}`}>{item.title}</Link>
                         </li>
                     ))}
+                    <li
+                        className={`list-none mx-5 border border-purple-300 hover:border-purple-400  rounded-md  text-purple-300 hover:text-purple-400 whitespace-nowrap`}
+                    >
+                        <a href={CV} download>
+                            Download CV
+                        </a>
+                    </li>
                 </div>
 
                 <div
@@ -71,6 +79,7 @@ function Header() {
                     {menuItems.map((item) => {
                         return (
                             <li
+                                key={item.key}
                                 className={`list-none mt-5 ${
                                     item.key === pathname &&
                                     'bg-white text-black rounded-md px-5'
@@ -80,6 +89,13 @@ function Header() {
                             </li>
                         );
                     })}
+                    <li
+                        className={`list-none mt-5 rounded-md  text-purple-300 hover:text-purple-400 whitespace-nowrap `}
+                    >
+                        <a href={CV} download>
+                            Download CV
+                        </a>
+                    </li>
                 </div>
             </div>
         </div>
