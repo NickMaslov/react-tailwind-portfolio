@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    content: ['./src/**/*.{html,js,jsx}'],
     theme: {
         extend: {
             colors: {
@@ -11,23 +11,22 @@ module.exports = {
                 mont: ['Montserrat', 'sans-serif'],
             },
         },
-        screens: {
-            '2xl': { max: '1835px' },
-            // => @media (max-width: 1535px) { ... }
+        // screens: {
+        //     '2xl': { max: '1835px' },
+        //     // => @media (max-width: 1535px) { ... }
 
-            xl: { max: '1279px' },
-            // => @media (max-width: 1279px) { ... }
+        //     xl: { max: '1279px' },
+        //     // => @media (max-width: 1279px) { ... }
 
-            lg: { max: '1023px' },
-            // => @media (max-width: 1023px) { ... }
+        //     lg: { max: '1023px' },
+        //     // => @media (max-width: 1023px) { ... }
 
-            md: { max: '767px' },
-            // => @media (max-width: 767px) { ... }
+        //     md: { max: '767px' },
+        //     // => @media (max-width: 767px) { ... }
 
-            sm: { max: '639px' },
-            // => @media (max-width: 639px) { ... }
-        },
+        //     sm: { max: '639px' },
+        //     // => @media (max-width: 639px) { ... }
+        // },
     },
     plugins: [],
-    purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
 };

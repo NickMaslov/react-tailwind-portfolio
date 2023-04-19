@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa';
+import { CloudArrowDownIcon, Bars3Icon } from '@heroicons/react/24/solid';
+
 import CV from '../resources/cv.pdf';
 
 const menuItems = [
@@ -23,40 +24,40 @@ const menuItems = [
 ];
 
 function Header() {
-    const [showMenu, setShowMenu] = useState('md:hidden');
+    const [showMenu, setShowMenu] = useState('hidden');
 
     const pathname = window.location.pathname;
 
     return (
         <div className='text-white font-mont shadow-lg z-20 relative '>
             <div
-                className={`flex bg-theme justify-between items-center md:p-5 pl-20 ${
-                    showMenu === '' && 'md:flex-col'
+                className={`flex bg-theme justify-between items-center px-5  ${
+                    showMenu === '' && 'flex-col md:flex-row'
                 }`}
             >
                 <div className='flex justify-between items-center w-full '>
                     <Link to='/'>
-                        <h1 className='text-4xl font-semibold hover:text-yellow-500 cursor-pointer '>
+                        <h1 className='text-4xl font-semibold hover:text-yellow-500 cursor-pointer whitespace-nowrap py-5 transition duration-100 '>
                             Nick Maslov
                         </h1>
                     </Link>
 
-                    <FaBars
+                    <Bars3Icon
                         onClick={() => {
-                            if (showMenu === 'md:hidden') {
+                            if (showMenu === 'hidden') {
                                 setShowMenu('');
                             } else {
-                                setShowMenu('md:hidden');
+                                setShowMenu('hidden');
                             }
                         }}
-                        className='lg:hidden xl:hidden 2xl:hidden md:flex cursor-pointer'
+                        className='h-8 w-8 stroke-white  flex md:hidden cursor-pointer'
                     />
                 </div>
 
-                <div className='flex md:hidden'>
+                <div className='hidden md:flex'>
                     {menuItems.map((item) => (
                         <li
-                            className={`list-none mx-5 px-5 ${
+                            className={`list-none  px-5 ${
                                 item.key === pathname &&
                                 'bg-white text-black rounded-md'
                             }`}
@@ -65,16 +66,17 @@ function Header() {
                         </li>
                     ))}
                     <li
-                        className={`list-none mx-5 border border-purple-300 hover:border-purple-400  rounded-md  text-purple-300 hover:text-purple-400 whitespace-nowrap`}
+                        className={`flex list-none px-5  rounded-md  text-purple-300 hover:text-purple-400 whitespace-nowrap`}
                     >
                         <a href={CV} download>
                             Download CV
                         </a>
+                        <CloudArrowDownIcon className='h-6 w-6 ml-1' />
                     </li>
                 </div>
 
                 <div
-                    className={`mt-5 md:flex items-start justify-start w-full flex-col lg:hidden 2xl:hidden xl:hidden ${showMenu}`}
+                    className={`flex items-start justify-start w-full flex-col md:hidden ${showMenu}`}
                 >
                     {menuItems.map((item) => {
                         return (
@@ -90,11 +92,12 @@ function Header() {
                         );
                     })}
                     <li
-                        className={`list-none mt-5 rounded-md  text-purple-300 hover:text-purple-400 whitespace-nowrap `}
+                        className={`flex list-none my-5 rounded-md  text-purple-300 hover:text-purple-400 whitespace-nowrap`}
                     >
                         <a href={CV} download>
                             Download CV
                         </a>
+                        <CloudArrowDownIcon className='h-6 w-6 ml-1' />
                     </li>
                 </div>
             </div>
