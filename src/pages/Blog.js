@@ -9,6 +9,21 @@ import Layout from '../components/Layout';
 function Blog() {
     return (
         <Layout>
+            <div className='flex justify-center'>
+                <div className='w-full md:w-2/3 lg:w-1/2'>
+                    <lottie-player
+                        src='https://assets2.lottiefiles.com/packages/lf20_4sabgt2r.json'
+                        background='transparent'
+                        speed='1'
+                        // style='width: 300px; height: 300px;'
+                        // className='w-[300px] h-[300px] p-5'
+                        // style={{ width: 500, height: 500 }}
+                        loop
+                        // controls
+                        autoplay
+                    />
+                </div>
+            </div>
             <div className='relative bg-white'>
                 <div className='mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end'>
                     <div className='lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2'>

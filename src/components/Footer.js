@@ -10,7 +10,7 @@ import {
 function Footer() {
     return (
         <>
-            <div className=' h-40 md:h-24 sm:h-12'>
+            {/* <div className=' h-40 md:h-24 sm:h-12'>
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>
                     <path
                         fill='#003566'
@@ -18,9 +18,9 @@ function Footer() {
                         d='M0,128L0,128L288,128L288,256L576,256L576,64L864,64L864,160L1152,160L1152,64L1440,64L1440,320L1152,320L1152,320L864,320L864,320L576,320L576,320L288,320L288,320L0,320L0,320Z'
                     ></path>
                 </svg>
-            </div>
+            </div> */}
             <div className='bg-theme w-screen flex justify-center'>
-                <div className='w-1/2 md:w-full'>
+                <div className='w-full md:w-1/2'>
                     <div className='p-5 font-mont text-center'>
                         <p className='text-gray-50 pb-5'></p>
 
@@ -31,13 +31,13 @@ function Footer() {
                                 <FaFacebook />
                             </a>
                             <a
-                                href='mailto:nickmmaslov@gmail.com'
+                                href='mailto:nickmmaslov@gmail.com?subject=Reaching from portfolio'
                                 target='_blank'
                                 rel='noopener noreferrer'
                             >
                                 <FaMailBulk />
                             </a>
-                            <a href='https://facebook'>
+                            <a href='https://instagram'>
                                 <FaInstagram />
                             </a>
                             <a href='https://facebook'>

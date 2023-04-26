@@ -24,8 +24,8 @@ function Home() {
                 {/* Intro section */}
                 <div className='h-screen bg-theme'>
                     <div
-                        className='grid md:grid-cols-1 grid-cols-2 h-screen items-center border-4 md:border-0
-            mx-10 md:mx-5 z-10 bg-theme border-white transform rotate-12 md:rotate-0 w-11/12'
+                        className='md:grid ,grid-cols-1  md:grid-cols-2 h-screen items-center border-0 md:border-4
+            md:mx-10 mx-5 z-10 bg-theme border-white transform md:rotate-12 rotate-0 md:w-11/12'
                     >
                         <div className='h-1/2'>
                             <lottie-player
@@ -37,19 +37,19 @@ function Home() {
                             ></lottie-player>
                         </div>
 
-                        <div className='font-bold text-white md:px-5 text-center'>
+                        <div className='font-bold text-white text-center'>
                             <h1
-                                className='text-7xl md:text-4xl'
+                                className='text-4xl md:text-7xl'
                                 data-aos='slide-right'
                             >
-                                Hi , I am{' '}
+                                Hi , I am
                                 <h1 className='text-yellow-500'>NICK MASLOV</h1>
                             </h1>
                             <h1
-                                className='text-4xl md:text-xl text-center'
+                                className='text-xl md:text-4xl text-center'
                                 data-aos='slide-left'
                             >
-                                FullStack{' '}
+                                FullStack
                                 <b className='text-red-500'>Developer</b>
                             </h1>
                         </div>

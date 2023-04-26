@@ -5,7 +5,18 @@ import projectsData from '../resources/projects';
 function Projects() {
     return (
         <Layout>
-            <div className='mt-20'>
+            <div className='flex justify-center'>
+                <div className='w-full md:w-2/3 lg:w-1/2'>
+                    <lottie-player
+                        src='https://assets1.lottiefiles.com/packages/lf20_pwohahvd.json'
+                        background='transparent'
+                        speed='1'
+                        loop
+                        autoplay
+                    />
+                </div>
+            </div>
+            {/* <div className='mt-20'>
                 <div className='h-screen'>
                     <div className='h-3/4'>
                         <lottie-player
@@ -29,23 +40,24 @@ function Projects() {
                         Because
                     </h1>
                 </div>
-                {/* <div className='font-bold text-center bg-red-500 mx-20 p-20 text-white rounded-tl-full rounded-br-full md:mx-5'>
+                <div className='font-bold text-center bg-red-500 mx-20 p-20 text-white rounded-tl-full rounded-br-full md:mx-5'>
                     <h1 className='text-8xl md:text-3xl' data-aos='slide-left'>
                         THE GAME IS...
                     </h1>
                     <h1 className='text-8xl md:text-3xl' data-aos='slide-right'>
                         CONSISTANCY
                     </h1>
-                </div> */}
-            </div>
+                </div>
+            </div> */}
 
-            <div className='grid mt-20 md:grid-cols-1 grid-cols-3 items-center justify-center gap-10 mx-20 md:mx-5'>
+            <div className='grid mt-20 grid-cols-1 md:grid-cols-3 items-center justify-center gap-10 mx-5 md:mx-20'>
                 {projectsData.map((project) => {
                     return (
                         <div>
                             <div className='relative p-10 border-2 text-center rounded-tr-3xl rounded-bl-3xl border-gray-400'>
                                 <img
                                     src={project.image}
+                                    alt=''
                                     className='w-full h-52 text-center'
                                 />
 

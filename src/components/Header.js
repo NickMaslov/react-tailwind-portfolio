@@ -23,6 +23,17 @@ const menuItems = [
     },
 ];
 
+const DownloadCV = () => (
+    <li
+        className={`flex list-none px-5 rounded-md  text-purple-300 hover:text-purple-400 whitespace-nowrap`}
+    >
+        <a href={CV} download>
+            Download CV
+        </a>
+        <CloudArrowDownIcon className='h-6 w-6 ml-1' />
+    </li>
+);
+
 function Header() {
     const [showMenu, setShowMenu] = useState('hidden');
 
@@ -57,7 +68,7 @@ function Header() {
                 <div className='hidden md:flex'>
                     {menuItems.map((item) => (
                         <li
-                            className={`list-none  px-5 ${
+                            className={`list-none px-5 ${
                                 item.key === pathname &&
                                 'bg-white text-black rounded-md'
                             }`}
@@ -65,24 +76,17 @@ function Header() {
                             <Link to={`${item.key}`}>{item.title}</Link>
                         </li>
                     ))}
-                    <li
-                        className={`flex list-none px-5  rounded-md  text-purple-300 hover:text-purple-400 whitespace-nowrap`}
-                    >
-                        <a href={CV} download>
-                            Download CV
-                        </a>
-                        <CloudArrowDownIcon className='h-6 w-6 ml-1' />
-                    </li>
+                    <DownloadCV />
                 </div>
 
                 <div
-                    className={`flex items-start justify-start w-full flex-col md:hidden ${showMenu}`}
+                    className={`flex items-start justify-start w-full flex-col md:hidden ${showMenu} space-y-5 last:my-5`}
                 >
                     {menuItems.map((item) => {
                         return (
                             <li
                                 key={item.key}
-                                className={`list-none mt-5 ${
+                                className={`list-none px-5  ${
                                     item.key === pathname &&
                                     'bg-white text-black rounded-md px-5'
                                 }`}
@@ -91,14 +95,7 @@ function Header() {
                             </li>
                         );
                     })}
-                    <li
-                        className={`flex list-none my-5 rounded-md  text-purple-300 hover:text-purple-400 whitespace-nowrap`}
-                    >
-                        <a href={CV} download>
-                            Download CV
-                        </a>
-                        <CloudArrowDownIcon className='h-6 w-6 ml-1' />
-                    </li>
+                    <DownloadCV />
                 </div>
             </div>
         </div>
